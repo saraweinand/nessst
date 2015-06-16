@@ -23,22 +23,27 @@ body {
 	width: 100%;
 	display: block;
 	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	z-index: 9999;
 }
 
 main {
 	width: 70%;
 	display: block;
 	margin: 5% auto;
+
 }
 
 /*------------------------------------------TYPOGRAPHY------------------------------------------*/
 
 h1 {
-	font-size: 2em;
+	font-size: 1.5em;
 	text-transform: uppercase;
 	font-weight: 600;
 	margin-bottom: 0;
-	color: #A65D5D;
+	color: #3a3a3a;
+	text-align: center;
 
 }
 
@@ -47,6 +52,7 @@ h2 {
 	text-transform: uppercase;
 	font-weight: 300;
 	margin: 0;
+	text-align: center;
 }
 
 h3 {
@@ -87,34 +93,35 @@ p {
 
 
 .ewu_logo {
-	width: 10%;
+	width: 9em;
 	display: block;
 	float: right;
 	padding: 1% 1% 1% 90%;
 	background: #ddd;
 }
 
-.nessst_logo {
-	width: 10%;
+nav ul.nessst_logo a img {
+	width: 7em;
 	display: inline-block;
-	padding: 1% 0 1% 1%;
 	margin: 0;
+	float: left;
 }
 
 nav {
-	width: 88%;
-	display: inline-block;
-	margin-left: 0;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
 	z-index: 9999999999;
 }
 
 nav ul {
 	display: inline-block;
+	z-index: 99999;
 }
 
 nav ul.primaryNav {
-	float: left;
-	margin: 2.75em 0 0 0;
+	float: right;
+	margin: 3% 5% 0 0;
 }
 
 nav ul.socialMedia {
@@ -144,9 +151,10 @@ nav li {
 nav li a {
 	text-decoration: none;
 	color: #3a3a3a;
-	font-weight: 300;
+	font-weight: 700;
 	text-transform: uppercase;
-	font-size: .75em;
+	font-size: 1em;
+	margin-left: 3em;
 }
 
 nav li a:hover {
@@ -157,17 +165,18 @@ nav li a:hover {
 /*--------------------------------------------BANNER--------------------------------------------*/
 
 .banner {
-	background: #2D6587;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
 	position: relative;
+	z-index: -999;
+	padding-bottom: 4%;
 
 }
 
 .banner svg {
-	z-index: 999;
-	margin: 0% 0;
+	z-index: -9999999999999999;
+	margin: -4% 0;
 }
 
 .banner h1 {
@@ -229,7 +238,7 @@ nav li a:hover {
 	top: 0;
 	left: 0;
 	width: 40%;
-	margin: 15% 0 0 5%;
+	margin: 10% 0 0 5%;
 }
 
 .banner-content a {
@@ -265,16 +274,56 @@ nav li a:hover {
 
 .content h1 {
 	text-align: center;
+	margin-top: 5%;
 }
 
-.content .p_column {
-	width: 45%;
+.programs .content {
+	margin-bottom: 10%;
+}
+
+.divider {
+	display: block;
+	margin: 0 auto;
+	padding: 2.5% 0;
+}
+
+.content p:first-of-type {
+	width: 75%;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.75em;
+	font-size: 1em;
+}
+
+.programs .content p:first-of-type {
+	width: 100%;
+
+}
+
+.column {
+	width: 33%;
 	display: inline-block;
-	margin: 2.5% auto;
+	margin: 12% auto 0 auto;
+	vertical-align: top;
 }
 
-.content .p_column:first-of-type {
-	margin: auto 5% 0 2.5%;
+.column img {
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.column h3 {
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 700;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.content .column p {
+	font-size: .8em;
 }
 
 table {
@@ -316,8 +365,7 @@ table:last-of-type td {
 .events {
 	width: 100%;
 	display: inline-block;
-	position: relative;
-	margin: 0;
+	margin: 5% 0 0 0;
 	padding: 0;
 }
 
@@ -331,7 +379,6 @@ table:last-of-type td {
 	width: 35.714286%;
 	display: inline-block;
 	float: right;
-	position: relative;
 }
 
 .event_01 {
@@ -346,9 +393,9 @@ table:last-of-type td {
 	right: 0;
 }
 
-.events h1, .events h2 {
-	color: #fff;
-	display: block;
+.events h1 {
+	text-align: center;
+	margin-bottom: 2.5%;
 }
 
 .events a {
@@ -370,14 +417,15 @@ table:last-of-type td {
 
 
 .twoColumnContent {
-	width: 65%;
+	width: 50%;
 	display: inline-block;
 	float: left;
 	position: relative;
+	margin-left: 8%;
 }
 
 .sidebar {
-	width: 20%;
+	width: 30%;
 	display: inline-block;
 	float: right;
 	position: relative;
@@ -486,6 +534,69 @@ table:last-of-type td {
 
 
 
+
+/*------------------------------------------program tabs------------------------------------------*/
+
+
+.programs .content h1 {
+	text-align: center;
+	margin-top: 0;
+}
+
+
+.programs .column img {
+	width: 180%;
+	margin-left: -40%;
+}
+
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+
+.tab-links {
+	text-align: center;
+	margin: -2em 0 4em 0;
+}
+
+.tab-links:after {
+    display: block;
+    clear: both;
+    content:'';
+}
+ 
+.tab-links li {
+	display: inline-block;
+    margin: 0 auto;
+    list-style: none;
+    width: 33%;
+    padding: 0;
+}
+
+.tab-links li img {
+	width: 100%;
+}
+ 
+ 
+.tab-links a:hover {
+	opacity: .8;
+    text-decoration:none;
+}
+
+ 
+.tab-content {
+    padding:15px;
+}
+ 
+.tab {
+    display:none;
+}
+ 
+.tab.active {
+    display:block;
+    opacity: .8;
+
+}
 
 
 
