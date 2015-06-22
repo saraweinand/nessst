@@ -100,55 +100,55 @@ p {
 	background: #ddd;
 }
 
-nav ul.nessst_logo a img {
+.header nav ul.nessst_logo a img {
 	width: 7em;
 	display: inline-block;
 	margin: 0;
 	float: left;
 }
 
-nav {
+.header nav {
 	width: 100%;
 	display: block;
 	margin: 0 auto;
 	z-index: 9999999999;
 }
 
-nav ul {
+.header nav ul {
 	display: inline-block;
 	z-index: 99999;
 }
 
-nav ul.primaryNav {
+.header nav ul.primaryNav {
 	float: right;
 	margin: 3% 5% 0 0;
 }
 
-nav ul.socialMedia {
+.header nav ul.socialMedia {
 	float: right;
 	margin: 2em 0 0 0;
 }
 
-nav ul.socialMedia a:first-of-type {
+.header nav ul.socialMedia a:first-of-type {
 	margin-right: -.5em;
 }
 
-nav ul.socialMedia a:hover {
+.header nav ul.socialMedia a:hover {
 	opacity: .5;
 }
 
-nav ul.socialMedia a img {
+.header nav ul.socialMedia a img {
 	width: 3em;
 	margin-bottom: 0;
 	padding-bottom: 0;
 
 }
 
-nav li {
+.header nav li {
 	list-style: none;
 }
 
-nav li a {
+.header nav li a {
 	text-decoration: none;
 	color: #3a3a3a;
 	font-weight: 700;
@@ -157,9 +157,56 @@ nav li a {
 	margin-left: 3em;
 }
 
-nav li a:hover {
+.header nav li a:hover {
 	color: #A65D5D;
 }
+
+.parallax-container {
+	background: #fbae18;
+	z-index: -9999;
+}
+
+.parallax-container img {
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+	padding-top: 10%;
+}
+
+img.arrow {
+	width: 3%;
+	padding-top: 2%;
+}
+
+
+
+
+.container .arrow > img { width:3%; }
+.arrow { 
+	position:relative; 
+	top:-2em; 
+	margin-right:0%; }
+.bounce {
+  -webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-webkit-animation-duration: 0.75s;
+	-moz-animation-duration: 0.75s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-webkit-animation-timing-function: eaze-in-out;
+	-moz-animation-timing-function: eaze-in-out;
+}
+@-webkit-keyframes bounce {
+	from { top:1em; }
+	to { top:2em; }
+}
+@-moz-keyframes bounce {
+	from { top:1em; }
+	to { top:2em; }
+}
+
 
 
 /*--------------------------------------------BANNER--------------------------------------------*/
@@ -259,6 +306,24 @@ nav li a:hover {
 .banner-content h2 {
 	color: #fff;
 }
+
+.column a {
+	text-decoration: none;
+	color: #262626;
+
+}
+
+.column a img:hover,
+.column a h3:hover {
+	opacity: .5;
+}
+
+.column a h3 {
+	width: 200%;
+	margin-left: -50%;
+	margin-top: 30%;
+}
+
 
 
 
@@ -465,27 +530,29 @@ table:last-of-type td {
 
 /*------------------------------------------GALLERY------------------------------------------*/
 
-.gallery h1 {
-	text-align: center;
-	margin-top: 5%;
-}
+
 .gallery h6 {
 	text-align: center;
 	margin-top: 1%;
 	margin-bottom: 5%;
 }
 .gallery {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
-	width: 100%;
-	padding: 0;
+	width: 80%;
 }
 .gallery li {
-	width: 24.75%;
+	width: 24%;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: inline-block;
+}
+
+.gallery li img {
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 .gallery li a{
 	margin: 0;
@@ -530,6 +597,284 @@ table:last-of-type td {
 	text-align: center;
 	background: rgba(0,0,0,0.6);
 }
+
+
+
+
+#lightbox {
+  margin: 0 auto;
+  padding: 0;
+  width: 80vw; 
+
+}
+
+#lightbox li img:hover {
+	opacity: .7;
+}
+
+#lightbox h5 {
+  font-family: 'Proxmima Nova', sans-serif;
+  font-weight: 300;
+  display: block;
+}
+
+#lightbox h4 {
+  font-family: 'Proxmima Nova', sans-serif;
+  font-weight: 300;
+  font-size: .75em;
+  display: block;
+}
+
+
+/*Image styles*/
+#lightbox ul {
+  margin: 0;
+  padding: 0;
+}
+#lightbox ul li {
+  float: left;
+  width: 24.5%;
+  display: inline-block;
+  margin: 0 .125em;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+/*No right margin for images in the 2nd column*/
+#lightbox ul li img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*Image titles*/
+#lightbox .image_title {
+  margin-top: 12%;
+  padding: 5% 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0; left: 0;
+  display: table;
+  /*Hover effect - default state*/
+  opacity: 0;
+  transition: all 0.5s;
+}
+#lightbox .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-align: center;
+  /*Vertical center align*/
+  display: table-cell;
+  /*Hover effect - default state*/
+  transform: scale(0.2);
+  transition: all 0.25s;
+  display: block;
+  margin-bottom: 0;
+}
+
+#lightbox .subtitle {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .75em;
+  text-align: center;
+  /*Vertical center align*/
+  display: table-cell;
+  /*Hover effect - default state*/
+  transform: scale(0.2);
+  transition: all 0.25s;
+  display: block;
+}
+/*Zoom icon over each title using iconfont and pseudo elements*/
+/*Hover states*/
+#lightbox li:hover .image_title {
+  opacity: 1;
+}
+#lightbox li:hover .title,
+#lightbox li:hover .subtitle {
+  transform: scale(1);
+}
+
+
+
+
+/* === Pop Up Styling === */
+
+
+.popup-trigger {
+  text-align: center;
+  color: #FFF;
+  border: 1px solid white;
+  padding: .1em;
+  text-transform: uppercase;
+}
+
+.popup-01,
+.popup-02,
+.popup-03,
+.popup-04,
+.popup-05,
+.popup-06,
+.popup-07,
+.popup-08,
+.popup-09,
+.popup-10,
+.popup-11,
+.popup-12  {
+  display: block;
+  background: rgba(0,0,0,.7);
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 99999999999999999999;
+}
+
+article.noscroll{
+    position:fixed;
+    overflow:hidden;
+}
+
+
+.popup-01.is-visible,
+.popup-02.is-visible,
+.popup-03.is-visible,
+.popup-04.is-visible,
+.popup-05.is-visible,
+.popup-06.is-visible,
+.popup-07.is-visible,
+.popup-08.is-visible,
+.popup-09.is-visible,
+.popup-10.is-visible,
+.popup-11.is-visible,
+.popup-12.is-visible {
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+  z-index: 999999999999999999999999999999;
+}
+
+.popup-container {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 75%;
+  margin: 1em auto;
+  background: #FFF;
+  text-align: center;
+  z-index: 999;
+  
+}
+
+.popup-container img {
+	width: 60%;
+	float: left;
+	display: inline-block;
+	padding: 5%;
+}
+
+.projectDescription {
+	width: 23%;
+	float: left;
+	padding-right: 5%;
+	margin-top: 5%;
+}
+
+.popup-container h3 {
+	text-align: left;
+	font-size: 1.25em;
+	margin-top: 10%;
+	font-weight: 500;
+	margin-bottom: 0;
+
+}
+
+.popup-container h4 {
+	text-align: left;
+	font-size: 1em;
+	font-weight: 300;
+	margin-top: 1%;
+	font-style: italic;
+
+}
+
+.popup-container p {
+	text-align: left;
+	font-size: .8em;
+	font-weight: 300;
+	margin-top: 1%;
+
+}
+
+.popup-container .buttons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.popup-container .buttons li {
+  float: left;
+  width: 50%;
+  list-style: none;
+}
+.popup-container .buttons a {
+  display: block;
+  height: 3.75em;
+  line-height: 3.75em;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.popup-container .popup-close {
+  color: #fc9003;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  width: .625em;
+  height: .625em;
+}
+
+.popup-close {
+  position: absolute;
+  bottom: .5em;
+  right: .5em;
+}
+
+
+.overlay{
+  background: black;
+  position:fixed;
+  width:100vw;
+  height: 100vh;
+  z-index: 0;
+  display:none;
+  top:0;
+  left:0;
+}
+
+
+
+/*  
+    Recommeded CSS
+    ==============
+*/
+
+.panel {
+    position: fixed;
+    left: -15.625em; /*or width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+
+/*  
+
+
 
 
 
@@ -599,6 +944,60 @@ table:last-of-type td {
 }
 
 
+.professional .twoColumnContent {
+	margin-top: 5%;
+}
+
+.industry a{
+	color: black;
+	text-decoration: none;
+	font-size: .9em;
+	font-weight: 300;
+
+}
+
+.industry a:hover {
+	opacity: .6;
+
+}
+
+.industry li {
+	list-style: none;
+	margin-top: 0;
+}
+
+.industry ul {
+	margin-top: .25em;
+}
+
+.videos {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+
+video {
+	width: 32%;
+	float: right;
+}
+
+video:first-of-type {
+	width: 67%;
+	float: left;
+}
+
+video:last-of-type {
+	margin-top: 1.75%;
+}
+
+.videos a {
+	width: 100%;
+	text-align: right;
+	text-decoration: none;
+}
+
+
 
 /*------------------------------------------FOOTER------------------------------------------*/
 
@@ -617,3 +1016,10 @@ table:last-of-type td {
 	font-weight: 300;
 	font-size: .6em;
 }
+
+
+
+
+/*CLEARFIX*/
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
+

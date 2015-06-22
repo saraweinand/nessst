@@ -17,52 +17,71 @@
 
 
 	<section class="header">
-		<a href="www.ewu.edu"><img src="img/ewu_logo.png" alt="ewu_logo" class="ewu_logo"></a>
-		<a href="index.html"><img src="img/nessst_logo.png" alt="nessst_logo" class="nessst_logo"></a>
+		<!--<a href="www.ewu.edu"><img src="img/ewu_logo.png" alt="ewu_logo" class="ewu_logo"></a>-->
+		
 		<nav>
+			<ul class="nessst_logo">
+				<a href="index.html"><img src="img/nessst_logo.png" alt="nessst_logo"></a>
+			</ul>
 			<ul class="primaryNav">
 				<li>
-					<a href="index.html">Home</a> |
-					<a href="programs.html">Programs</a> |
-					<a href="portfolio.html">Portfolio</a> |
-					<a href="professional.html">Professional</a> |
+					<a href="index.html">Home</a>
+					<a href="programs.html">Program</a>
+					<a href="portfolio.html">Portfolio</a>
+					<a href="professional.html">Professional</a>
 					<a href="blog.html">Blog</a>
 				</li>
 			</ul>
-			<ul class="socialMedia">
+
+			<!--<ul class="socialMedia">
 				<li>
 					<a href="xxxxxx"><img src="img/socialmedia-01.png" alt=""></a>
 					<a href="xxxxxx"><img src="img/socialmedia-02.png" alt=""></a>
 				</li>
-			</ul>
+			</ul>-->
 		</nav>
 	</section>
-
 
 <!--banner-->
 
-	<section class="banner">
-		<nav class="secondaryNav">
-			<ul>
-				<li>
-					<a href="professional.html">Professional Practice</a> |
-					<a href="#careers">Careers In Design</a>
-				</li>
-			</ul>
-		</nav>
-		<img src="img/programs_banner_01.jpg" alt="">
-	</section>
+	<div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10"  data-natural-height="900" style="height: 400px;"></div>
 
 <!--main content-->
+
+<section class="content">
+		<h1>Professional Practice</h1>
+		<img src="img/x.png" class="divider">
+		<p>Depending on a student's area of interest... they may find work in design studios, interactive studios, advertising agencies, corporate marketing departments and other businesses involved in the creation and production of design / communication projects. </p>
+
+	</section>
+
+	<section class="videos">
+			<video id="video" controls>
+				<source src="video/bg.mp4" type="video/mp4">
+					
+			</video>
+			<video id="video" controls>
+				<source src="video/bg.mp4" type="video/mp4">
+			</video>
+			<video id="video" controls>
+				<source src="video/bg.mp4" type="video/mp4">
+			</video>
+
+			<a href="xxx">more videos ></a>
+
+	</section>
 
 	<section class="content" id="careers">
 		<h1>Careers in Design</h1>
 		<h2>Spokane, Washington</h2>
+		<img src="img/x.png" class="divider">
 		<p>Depending on a student's area of interest... they may find work in design studios, interactive studios, advertising agencies, corporate marketing departments and other businesses involved in the creation and production of design / communication projects. </p>
 
+		<section class="twoColumnContent">
+
 		<h4>ADVERTISING</h4>
-		<nav>
-			<ul class="indusrty">
+		<nav class="industry">
+			<ul>
 				<li><a href="">Company #1</a> |
 				<a href="">Company #2</a> |
 				<a href="">Company #3</a> |
@@ -72,8 +91,8 @@
 		</nav>
 	
 		<h4>GRAPHIC DESIGN</h4>
-		<nav>
-			<ul class="indusrty">
+		<nav class="industry">
+			<ul>
 				<li><a href="">Company #1</a> |
 				<a href="">Company #2</a> |
 				<a href="">Company #3</a> |
@@ -83,8 +102,8 @@
 		</nav>
 
 		<h4>WEB/INTERACTIVE DESIGN</h4>
-		<nav>
-			<ul class="indusrty">
+		<nav class="industry">
+			<ul>
 				<li><a href="">Company #1</a> |
 				<a href="">Company #2</a> |
 				<a href="">Company #3</a> |
@@ -94,8 +113,8 @@
 		</nav>
 
 		<h4>IN-HOUSE DESIGN</h4>
-		<nav>
-			<ul class="indusrty">
+		<nav class="industry">
+			<ul>
 				<li><a href="">Company #1</a> |
 				<a href="">Company #2</a> |
 				<a href="">Company #3</a> |
@@ -105,8 +124,8 @@
 		</nav>
 	
 		<h4>PUBLISHING</h4>
-		<nav>
-			<ul class="indusrty">
+		<nav class="industry">
+			<ul>
 				<li><a href="">Company #1</a> |
 				<a href="">Company #2</a> |
 				<a href="">Company #3</a> |
@@ -116,8 +135,8 @@
 		</nav>
 	
 		<h4>PRINTING</h4>
-		<nav>
-			<ul class="indusrty">
+		<nav class="industry">
+			<ul>
 				<li><a href="">Company #1</a> |
 				<a href="">Company #2</a> |
 				<a href="">Company #3</a> |
@@ -125,6 +144,7 @@
 				<a href="">Company #5</a></li>
 			</ul>
 		</nav>
+	</section>
 		
 	</section>
 
@@ -144,6 +164,10 @@
 		<h5>Job Title | Company Name <a href="xxxx">Apply</a></h5> 
 	</section>
 
+
+	<div class="clear"></div>
+
+
 <!--footer-->
 	
 	<section class="footer">
@@ -158,6 +182,10 @@
 	<!--scripts-->
 	<script type='text/javascript' src='js/jquery.min.js'></script>
 	<script type='text/javascript' src='js/scripts.js'></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/video.js"></script>
 
 </body>
 </html>
