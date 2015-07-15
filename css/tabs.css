@@ -1,0 +1,43 @@
+/*programs menu*/
+
+.tabs {
+    width:100%;
+    display:inline-block;
+    background: #CCCCCC;
+}
+
+.tab-links {
+	text-align: center;
+}
+
+ 
+.tab-links li {
+	display: inline-block;
+    list-style: none;
+    color: white;
+}
+
+.tab-links li a {
+	color: white;
+	text-decoration: none;
+}
+
+ 
+.tab-links a:hover {
+	opacity: .8;
+    text-decoration:none;
+}
+
+ 
+.tab-content {
+    padding:15px;
+}
+ 
+.tab {
+    display:none;
+}
+ 
+.tab.active {
+    display:block;
+
+}
