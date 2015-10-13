@@ -649,14 +649,13 @@ display: block;}
 .gallery li{
 	display: inline-block;
 	float: left;
-	width: 25%;
-	margin: 0;
+	width: 23%;
+	margin: 0 1%;
 	position: relative;
-	font-size: 0;
    transition: .25s box-shadow ease-in-out .1s;
 }
 
-.gallery li:hover{
+.gallery li img:hover{
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
@@ -665,9 +664,13 @@ display: block;}
 	width: 100%;
 }
 
-.gallery li h2 {
-  text-align: center;
+.gallery h2 {
+	color: #fff;
+	padding: 1.25em 0 .75em 0;
+	background: #444;
+	margin: -.5em 0 1em 0;
 }
+
 
 /*Lighbox CSS*/
 
@@ -743,12 +746,38 @@ display: block;}
 .professional .twoColumnContent {
 	margin-top: 5%;
 }
+.industry_container {
+	margin-left: 10%;
+	width: 58%;
+	float: left;
+	display: inline-block;
+}
+
+
+
+.industry_sidebar {
+	width: 27%;
+	float: left;
+	display: inline-block;
+	border-left: 1px solid #444;
+	padding-left: 3%;
+}
+
+.industry_sidebar h2 {
+	text-align: left;
+}
+
+.industry {
+	padding: 0;
+	margin: -2% 0 0 0;
+}
 
 .industry a{
 	color: black;
 	text-decoration: none;
 	font-size: .9em;
 	font-weight: 300;
+	margin: 0 .5em;
 
 }
 
@@ -776,11 +805,13 @@ display: block;}
 
 video {
 	width: 32%;
-	float: right;
+	float: left;
+	display: inline-block;
 }
 
 video:first-of-type {
 	width: 67%;
+	display: inline-block;
 	float: left;
 	padding-bottom: 2%;
 }
@@ -790,13 +821,13 @@ video:last-of-type {
 }
 
 .videos a {
-  background: #df3836;
-  text-decoration: none;
-  color: #000;
-  margin-top: 10%;
-  padding: 1% 2.5%;
-  font-size: .8em;
-  text-transform: uppercase;
+  visibility: none;
+
+}
+
+.videosvg {
+	margin-top: 5%;
+	margin-bottom: 0;
 }
 
 
