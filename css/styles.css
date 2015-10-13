@@ -107,64 +107,88 @@ p {
 
 /*--------------------------------------------HEADER--------------------------------------------*/
 
-
-
-.ewu_logo {
-	width: 9em;
-	display: block;
-	float: right;
-	padding: 1% 1% 1% 90%;
-	background: #ddd;
+.header {
+	border-bottom: 2px solid rgba(255,255,255,.4);
 }
 
-.header nav ul.nessst_logo a img {
-	width: 7em;
-	display: inline-block;
-	margin: 15% 0;
+nav.ewu_logo {
 	float: left;
-}
-
-.header nav {
-	width: 100%;
-	display: block;
-	margin: 0 auto;
-	z-index: 9999999999;
-	border-bottom: 3px solid rgba(255,255,255,.4);
-}
-
-.header nav ul {
 	display: inline-block;
-	z-index: 99999;
+	padding: 0 0 0 3%;
 }
 
-.header nav ul.primaryNav {
-	float: right;
-	margin: 2.5% 5% 0 0;
+.mobile {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #eee; 
+}
+.mobile div {
+  display: none;
+}
+.mobile button {
+	opacity: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  text-indent: 200%;
+  overflow: hidden;
+  background: rgba(255,255,255,0.8) url("http://i.imgur.com/vKRaKDX.png") center no-repeat;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-size: 80%;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  -webkit-transition: all 400ms ease;
+          transition: all 400ms ease;
+}
+.mobile button.expanded {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: transparent;
+  border: 0;
+}
+.mobile a {
+  display: block;
+  text-align: center;
+  padding: 0;
+  color: #000;
 }
 
-
-
-
-
-
-.header nav li {
-	list-style: none;
-	color: #fff;
+.mobile a:last-of-type {
+  padding-bottom: 2em;
 }
-
-.header nav li a {
-	text-decoration: none;
+a {
+  text-decoration: none;
 	font-weight: 100;
 	text-transform: uppercase;
 	font-size: 1em;
 	color: #fff;
-	margin: 0 1em 0 1.5em;
+	margin: 2em 1em 0 1.5em;
+}
+a:hover,
+a:active,
+a:focus {
+  color: red;
+}
+.desktop {
+	margin: 2% ;
+  float: right;
+  display: block;
+  overflow: hidden;
+}
+.desktop a {
+  box-sizing: border-box;
+}
+.desktop a:last-child {
+  border-right: none;
 }
 
-.header nav li a:hover {
-	border-bottom: 3px solid #df3836;
-	padding-bottom: 1%;
-}
+
 
 .parallax-container {
 	background: url(../img/homebanner.jpg) no-repeat center center fixed; 
@@ -607,72 +631,68 @@ table:last-of-type td {
 /*------------------------------------------GALLERY------------------------------------------*/
 
 
-.gallery h6 {
+.gallery-container{
+	margin: -2% auto 5% auto;
+	overflow: hidden;
+  width: 80%;
+display: block;}
+
+.text-center{
 	text-align: center;
-	margin-top: 1%;
-	margin-bottom: 5%;
-}
-.gallery {
-	margin: 0 auto;
-	padding: 0;
-	width: 80%;
-}
-.gallery li {
-	width: 24%;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: inline-block;
+	margin-bottom: 1em;
 }
 
-.gallery li img {
-	width: 100%;
+.gallery ul{
+	list-style: none;
 	padding: 0;
-	margin: 0;
 }
-.gallery li a{
-	margin: 0;
-	padding: 0;
+.gallery li{
 	display: inline-block;
 	float: left;
-	margin-top: -.5%;
-}
-
-
-
-.gallery li figure{
-	width: 100%;
-	height: 100%;
-	display: block;
-	overflow: hidden;
-	position: relative;
+	width: 25%;
 	margin: 0;
-	padding: 0;
+	position: relative;
+	font-size: 0;
+   transition: .25s box-shadow ease-in-out .1s;
 }
 
-.gallery .galleryTitle{
-	color:white;
-	display:table;
-	height:100%;
-	left:0;
-	opacity:0;
-	position:absolute;
-	right:0;
-	top:0;
-	z-index: 100;
+.gallery li:hover{
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
 }
 
-
-/*Gallery Hover*/
-
-.gallery li:hover .galleryTitle{
-	opacity: 1;
-	height: 100%;
+.gallery img{
 	width: 100%;
-	padding: 40% 0 50% 0;
-	text-align: center;
-	background: rgba(0,0,0,0.6);
 }
+
+.gallery li h2 {
+  text-align: center;
+}
+
+/*Lighbox CSS*/
+
+
+.lightbox{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+.lightbox img{
+	max-width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+
 
 
 
@@ -773,7 +793,7 @@ video:last-of-type {
   background: #df3836;
   text-decoration: none;
   color: #000;
-  margin-top: 5%;
+  margin-top: 10%;
   padding: 1% 2.5%;
   font-size: .8em;
   text-transform: uppercase;
@@ -802,7 +822,37 @@ video:last-of-type {
 
 
 
-/*@media only screen and (min-device-width: 640px){
+
+
+@media (max-width: 800px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .mobile button {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) { 
+
+	.mobile {
+    visibility: visible;
+  }
+  .desktop {
+    visibility: hidden;
+  }
 
 	.home .parallax-container h1 {
   font-size: 2em;
@@ -872,6 +922,8 @@ video:last-of-type {
 }
 
 }*/
+
+
 
 
 
