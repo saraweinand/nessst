@@ -135,8 +135,7 @@ nav.ewu_logo {
   border: 0;
   text-indent: 200%;
   overflow: hidden;
-  background: rgba(255,255,255,0.8) url("http://i.imgur.com/vKRaKDX.png") center no-repeat;
-  border: 1px solid #ddd;
+  background: url("https://s3-eu-west-1.amazonaws.com/weld-tutorials/getting-started/icon-hamburger-light.svg") center no-repeat;
   border-radius: 3px;
   background-size: 80%;
   width: 30px;
